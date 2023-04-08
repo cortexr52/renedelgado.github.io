@@ -6,9 +6,10 @@ function isMobile() {
 
 function createFlash(x, y) {
     var flash = document.createElement('div');
+    var radio = 50; // La mitad del ancho o la altura del círculo
     flash.classList.add('flash');
-    flash.style.top = y + 'px';
-    flash.style.left = x + 'px';
+    flash.style.top = y - radio + 'px'; // Ajustar la posición superior del círculo
+    flash.style.left = x - radio + 'px'; // Ajustar la posición izquierda del círculo
     flash.style.backgroundColor = getRandomColor();
     document.body.appendChild(flash);
     setTimeout(function () {
