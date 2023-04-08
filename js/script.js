@@ -7,8 +7,8 @@ function isMobile() {
 function createFlash(top, left) {
     var flash = document.createElement('div');
     flash.classList.add('flash');
-    flash.style.top = top;
-    flash.style.left = left;
+    flash.style.top = (Math.random() * 80 + 10) + 'vh';
+    flash.style.left = (Math.random() * 80 + 10) + 'vw';
     flash.style.backgroundColor = getRandomColor();
     document.body.appendChild(flash);
     setTimeout(function () {
