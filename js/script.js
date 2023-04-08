@@ -35,6 +35,10 @@ window.onload = function () {
                 flash.remove();
             }, 500);
         });
+        document.addEventListener('touchstart', function (event) {
+            var touch = event.touches[0];
+            createFlash(touch.clientX, touch.clientY);
+        });
     }
 };
 
